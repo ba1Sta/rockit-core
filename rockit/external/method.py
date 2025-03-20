@@ -243,7 +243,7 @@ class ExternalMethod:
             self.p_local_cat = ca.vvcat(self.p_local)
 
 
-            self.p_global_value = DM.zeros(ca.vvcat(self.p_global).sparsity())
+            self.p_global_value = DM.zeros(ca.vvcat(self.p_global))
             self.p_local_value = DM.zeros(ca.vvcat(self.p_local).numel(), self.N+1)
 
             self.transcribe_phase1(stage, **kwargs)
